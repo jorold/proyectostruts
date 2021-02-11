@@ -1,12 +1,17 @@
 package forms;
 
+import java.sql.SQLException;
 import javax.servlet.http.HttpServletRequest;
+import models.Departamento;
 
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
+import repositories.RepositoryDepartamentos;
 
 public class Form08InsertarDepartamento extends org.apache.struts.action.ActionForm {
+
+    RepositoryDepartamentos repo;
 
     private int numero;
     private String nombre;
@@ -38,6 +43,7 @@ public class Form08InsertarDepartamento extends org.apache.struts.action.ActionF
 
     public Form08InsertarDepartamento() {
         super();
+        this.repo = new RepositoryDepartamentos();
 
     }
 
@@ -48,7 +54,15 @@ public class Form08InsertarDepartamento extends org.apache.struts.action.ActionF
 
         } else if (getLocalidad() == null || getLocalidad().equals("")) {
             errors.add("localidad", new ActionMessage("error.localidad.obligatorio"));
-
+        }
+        int numero = this.getNumero();
+        try {
+            Departamento departamento = this.repo.buscarDepartamento(numero);
+            if (departamento != null) {
+                errors.add("numero", new ActionMessage("error.departamento.repetido"));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error " + ex);
         }
         return errors;
     }

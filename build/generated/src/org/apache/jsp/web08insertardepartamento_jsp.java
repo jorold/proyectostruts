@@ -126,6 +126,10 @@ public final class web08insertardepartamento_jsp extends org.apache.jasper.runti
         if (_jspx_meth_html_errors_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_html_form_0, _jspx_page_context))
           return true;
         out.write("\n");
+        out.write("            ");
+        if (_jspx_meth_html_errors_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_html_form_0, _jspx_page_context))
+          return true;
+        out.write("\n");
         out.write("            </div>\n");
         out.write("        ");
         int evalDoAfterBody = _jspx_th_html_form_0.doAfterBody();
@@ -228,6 +232,24 @@ public final class web08insertardepartamento_jsp extends org.apache.jasper.runti
       return true;
     }
     _jspx_tagPool_html_errors_property_nobody.reuse(_jspx_th_html_errors_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_html_errors_2(javax.servlet.jsp.tagext.JspTag _jspx_th_html_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  html:errors
+    org.apache.struts.taglib.html.ErrorsTag _jspx_th_html_errors_2 = (org.apache.struts.taglib.html.ErrorsTag) _jspx_tagPool_html_errors_property_nobody.get(org.apache.struts.taglib.html.ErrorsTag.class);
+    _jspx_th_html_errors_2.setPageContext(_jspx_page_context);
+    _jspx_th_html_errors_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_html_form_0);
+    _jspx_th_html_errors_2.setProperty("numero");
+    int _jspx_eval_html_errors_2 = _jspx_th_html_errors_2.doStartTag();
+    if (_jspx_th_html_errors_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_html_errors_property_nobody.reuse(_jspx_th_html_errors_2);
+      return true;
+    }
+    _jspx_tagPool_html_errors_property_nobody.reuse(_jspx_th_html_errors_2);
     return false;
   }
 }
