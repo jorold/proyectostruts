@@ -61,4 +61,15 @@ public class RepositoryDepartamentos {
             return null;
         }
     }
+
+    public void insertarDepartamento(int numero, String nombre, String localidad) throws SQLException {
+        Connection cn = this.getConnection();
+        String sql = "insert into dept values(?,?,?)";
+        PreparedStatement pst = cn.prepareStatement(sql);
+        pst.setInt(1, numero);
+        pst.setString(2, nombre);
+        pst.setString(3, localidad);
+        pst.executeUpdate();
+        cn.close();
+    }
 }
