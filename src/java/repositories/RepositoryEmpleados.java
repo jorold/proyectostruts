@@ -19,26 +19,6 @@ public class RepositoryEmpleados {
         return cn;
     }
 
-    public ArrayList<Empleado> getEmpleados() throws SQLException {
-        Connection cn = this.getConnection();
-        String sql = "select * from emp";
-        Statement st = cn.createStatement();
-        ResultSet rs = st.executeQuery(sql);
-        ArrayList<Empleado> lista = new ArrayList<>();
-        while (rs.next()) {
-            int id = rs.getInt("EMP_NO");
-            String ape = rs.getString("APELLIDO");
-            String ofi = rs.getString("OFICIO");
-            int sal = rs.getInt("SALARIO");
-            int dept = rs.getInt("DEPT_NO");
-            Empleado emp = new Empleado(id, ape, ofi, sal, dept);
-            lista.add(emp);
-        }
-        rs.close();
-        cn.close();
-        return lista;
-    }
-
     public ArrayList<Empleado> getOficioEmpleado(String oficio) throws SQLException {
         Connection cn = this.getConnection();
         String sql = "select * from emp where upper(oficio)=upper(?)";
@@ -57,6 +37,25 @@ public class RepositoryEmpleados {
         }
         rs.close();
         cn.close();
-        return lista;
+        if (lista.size() == 0) {
+            return null;
+        } else {
+            return lista;
+        }
+    }
+
+    public ArrayList<String> getOficios() throws SQLException {
+        Connection cn = this.getConnection();
+        String sql = "select distinct oficio from emp";
+        Statement st = cn.createStatement();
+        ResultSet rs = st.executeQuery(sql);
+        ArrayList<String> oficios = new ArrayList<>();
+        while (rs.next()) {
+            String ofi = rs.getString("OFICIO");
+            oficios.add(ofi);
+        }
+        rs.close();
+        cn.close();
+        return oficios;
     }
 }

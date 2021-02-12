@@ -11,12 +11,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Menú de Struts</h1>
-        <ul class="list-group">
-            <li class="list-group-item"><html:link href="web02sumarnumeros.jsp">Sumar números</html:link></li>
-            <li class="list-group-item"><html:link action="/Action06Departamentos">Departamentos</html:link></li>
-            <li class="list-group-item"><html:link href="web09menudepartamentosestatico.jsp">Menú departamentos estático</html:link></li>
-            <li class="list-group-item"><html:link action="/Action11MenuOficiosDinamicos">Menú oficios dinámicos</html:link></li>
-        </ul>
+        <h1>Oficio empleados</h1>
+        <logic:present name="empleadosoficio">
+            <bean:write name="empleadosoficio" filter="false"/>
+        </logic:present>
+        <html:link  href="web10menuoficios.jsp">Volver a Menú Oficios</html:link>
     </body>
 </html>

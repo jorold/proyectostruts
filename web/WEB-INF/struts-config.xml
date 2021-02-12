@@ -48,6 +48,7 @@
     </global-exceptions>
 
     <global-forwards>
+        <forward name="webmenuoficiosdinamicos" path="/web11menuoficiosdinamicos.jsp"/>
         <forward name="webempleadosoficio" path="/web10empleadosoficio.jsp"/>
         <forward name="webdetallesdepartamento" path="/web09detallesdepartamento.jsp"/>
         <forward name="webdepartamentos" path="/web06departamentos.jsp"/>
@@ -57,6 +58,9 @@
     </global-forwards>
 
     <action-mappings>
+        <action path="/Action11MenuOficiosDinamicos" 
+                type="controllers.Action11MenuOficiosDinamicos"
+                scope="request"/>
         <action path="/Action10MenuOficios" 
                 type="controllers.Action10MenuOficios"
                 scope="request"/>
