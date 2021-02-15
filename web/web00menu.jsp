@@ -17,6 +17,7 @@
             <li class="list-group-item"><html:link action="/Action06Departamentos">Departamentos</html:link></li>
             <li class="list-group-item"><html:link href="web09menudepartamentosestatico.jsp">Menú departamentos estático</html:link></li>
             <li class="list-group-item"><html:link action="/Action11MenuOficiosDinamicos">Menú oficios dinámicos</html:link></li>
+            <li class="list-group-item"><html:link action="/Action12MenuDepartamentosDinamico">Menú departamentos dinámicos</html:link></li>
         </ul>
     </body>
 </html>

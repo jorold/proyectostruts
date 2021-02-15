@@ -72,4 +72,5 @@ public class RepositoryDepartamentos {
         pst.executeUpdate();
         cn.close();
     }
+
 }

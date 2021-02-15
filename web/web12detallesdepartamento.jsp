@@ -12,19 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Menu Departamentos dinámico</h1>
-        <logic:present name="DEPARTAMENTOS">
-            <ul class="list-group">
-                <logic:iterate name="DEPARTAMENTOS" id="departamento">
-                    <li class="list-group-item">
-                        <html:link action="/Action12DetallesDepartamento" 
-                                   paramId="iddepartamento" paramName="departamento" 
-                                   paramProperty="numero">
-                            <bean:write name="departamento" property="nombre"/>
-                        </html:link>
-                    </li>
-                </logic:iterate>                                 
-            </ul>
+        <h1>Detalles departamento</h1>
+        <logic:present name="detallesdept">
+            <bean:write name="detallesdept" filter="false"/>
         </logic:present>
     </body>
 </html>
