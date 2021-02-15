@@ -39,6 +39,10 @@
                    type="org.apache.struts.action.DynaActionForm">
                 <form-property name="collatz" type="java.lang.String"/>
         </form-bean>
+        <form-bean name="Form13EliminarDepartamento"
+                   type="org.apache.struts.action.DynaActionForm">
+            <form-property name="iddepartamento" type="java.lang.String"/>
+        </form-bean>
         <form-bean name="Form08InsertarDepartamento" 
                    type="forms.Form08InsertarDepartamento"/>
     </form-beans>
@@ -48,6 +52,7 @@
     </global-exceptions>
 
     <global-forwards>
+        <forward name="web13eliminardepartamento" path="/web13eliminardepartamento.jsp"/>
         <forward name="web12detallesdepartamento" path="/web12detallesdepartamento.jsp"/>
         <forward name="webmenudepartamentosdinamicos" path="/web12menudepartamentosdinamico.jsp"/>
         <forward name="webmenuoficiosdinamicos" path="/web11menuoficiosdinamicos.jsp"/>
@@ -60,6 +65,11 @@
     </global-forwards>
 
     <action-mappings>
+        <action path="/Action13TablaDepartamentos" type="controllers.Action13TablaDepartamentos"/>
+        <action path="/Action13EliminarDepartamento" 
+                type="controllers.Action13EliminarDepartamento"
+                name="Form13EliminarDepartamento"
+                scope="request"/>
         <action path="/Action12DetallesDepartamento" type="controllers.Action12DetallesDepartamento"/>
         <action path="/Action12MenuDepartamentosDinamico" 
                 type="controllers.Action12MenuDepartamentosDinamico"/>

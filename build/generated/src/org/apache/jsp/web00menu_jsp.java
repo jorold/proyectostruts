@@ -89,6 +89,10 @@ public final class web00menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_html_link_4(_jspx_page_context))
         return;
       out.write("</li>\n");
+      out.write("            <li class=\"list-group-item\">");
+      if (_jspx_meth_html_link_5(_jspx_page_context))
+        return;
+      out.write("</li>\n");
       out.write("        </ul>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
@@ -267,6 +271,39 @@ public final class web00menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_html_link_action.reuse(_jspx_th_html_link_4);
+    return false;
+  }
+
+  private boolean _jspx_meth_html_link_5(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  html:link
+    org.apache.struts.taglib.html.LinkTag _jspx_th_html_link_5 = (org.apache.struts.taglib.html.LinkTag) _jspx_tagPool_html_link_action.get(org.apache.struts.taglib.html.LinkTag.class);
+    _jspx_th_html_link_5.setPageContext(_jspx_page_context);
+    _jspx_th_html_link_5.setParent(null);
+    _jspx_th_html_link_5.setAction("/Action13TablaDepartamentos");
+    int _jspx_eval_html_link_5 = _jspx_th_html_link_5.doStartTag();
+    if (_jspx_eval_html_link_5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      if (_jspx_eval_html_link_5 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+        out = _jspx_page_context.pushBody();
+        _jspx_th_html_link_5.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+        _jspx_th_html_link_5.doInitBody();
+      }
+      do {
+        out.write("Menú eliminar departamentos");
+        int evalDoAfterBody = _jspx_th_html_link_5.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+      if (_jspx_eval_html_link_5 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+        out = _jspx_page_context.popBody();
+    }
+    if (_jspx_th_html_link_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_html_link_action.reuse(_jspx_th_html_link_5);
+      return true;
+    }
+    _jspx_tagPool_html_link_action.reuse(_jspx_th_html_link_5);
     return false;
   }
 }
