@@ -5,9 +5,8 @@
         <group>
             <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/web/web14detallesempleado.jsp</file>
             <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/web/WEB-INF/struts-config.xml</file>
-            <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/src/java/controllers/Action14Empleados.java</file>
             <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/web/web00menu.jsp</file>
-            <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/web/web14empleados.jsp</file>
+            <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/src/java/controllers/Action14DetallesEmpleado.java</file>
             <file>file:/C:/Users/jorol/OneDrive/Curso%20Programación/NetBeansProjects/ProyectoStruts/src/java/repositories/RepositoryEmpleados.java</file>
         </group>
     </open-files>

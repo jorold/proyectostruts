@@ -14,6 +14,8 @@
     <body>
         <h1>Detalles empleado</h1>
         <html:link action="/Action14Empleado">Volver a Empleados</html:link>
+        <html:link action ="/Action14DetallesEmpleado" 
+                   paramId="incrementar" paramName="EMPLEADO" paramProperty="idempleado">Incrementar</html:link>
         <logic:present name="detallesempleado">
             <bean:write name="detallesempleado" filter="false"/>
         </logic:present>
