@@ -78,7 +78,7 @@ public final class web16eliminarenfermos_jsp extends org.apache.jasper.runtime.H
       out.write("        ");
       if (_jspx_meth_html_form_0(_jspx_page_context))
         return;
-      out.write("\n");
+      out.write("              \n");
       out.write("        <table class=\"table table-bordered\">\n");
       out.write("            <thead>\n");
       out.write("                <tr>\n");

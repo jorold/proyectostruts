@@ -17,7 +17,7 @@ crossorigin="anonymous">
             <label>Id NSS</label>
             <html:text property="idnss"/>
             <button type="submit" class="btn btn-outline-danger">Eliminar</button>
-        </html:form>
+        </html:form>              
         <table class="table table-bordered">
             <thead>
                 <tr>
