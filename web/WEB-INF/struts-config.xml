@@ -43,6 +43,10 @@
                    type="org.apache.struts.action.DynaActionForm">
             <form-property name="iddepartamento" type="java.lang.String"/>
         </form-bean>
+        <form-bean name="Form16EliminarEnfermo" 
+                   type="org.apache.struts.action.DynaActionForm">
+            <form-property name="idnss" type="java.lang.String"/>
+        </form-bean>
         <form-bean name="Form08InsertarDepartamento" 
                    type="forms.Form08InsertarDepartamento"/>
     </form-beans>
@@ -52,6 +56,7 @@
     </global-exceptions>
 
     <global-forwards>
+        <forward name="web16eliminarenfermos" path="/web16eliminarenfermos.jsp"/>
         <forward name="web14empleados" path="/web14empleados.jsp"/>
         <forward name="web14detallesempleado" path="/web14detallesempleado.jsp"/>        
         <forward name="web13eliminardepartamento" path="/web13eliminardepartamento.jsp"/>
@@ -67,6 +72,8 @@
     </global-forwards>
 
     <action-mappings>
+        <action path="/Action16EliminarEnfermo" type="controllers.Action16EliminarEnfermo" 
+                name="Form16EliminarEnfermo" scope="request"/>
         <action path="/Action14DetallesEmpleado" type="controllers.Action14DetallesEmpleado"/>
         <action path="/Action14Empleado" type="controllers.Action14Empleado"/>              
         <action path="/Action13TablaDepartamentos" type="controllers.Action13TablaDepartamentos"/>
@@ -133,6 +140,7 @@
     <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
     
     <plug-in className="plugins.PlugInDepartamentos"></plug-in>
+    <plug-in className="plugins.PlugInEnfermos"></plug-in>
     <plug-in className="org.apache.struts.tiles.TilesPlugin" >
         <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
         <set-property property="moduleAware" value="true" />
