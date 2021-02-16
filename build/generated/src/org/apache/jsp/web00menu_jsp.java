@@ -93,6 +93,10 @@ public final class web00menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_html_link_5(_jspx_page_context))
         return;
       out.write("</li>\n");
+      out.write("            <li class=\"list-group-item\"> ");
+      if (_jspx_meth_html_link_6(_jspx_page_context))
+        return;
+      out.write("</li>\n");
       out.write("        </ul>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
@@ -304,6 +308,39 @@ public final class web00menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_html_link_action.reuse(_jspx_th_html_link_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_html_link_6(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  html:link
+    org.apache.struts.taglib.html.LinkTag _jspx_th_html_link_6 = (org.apache.struts.taglib.html.LinkTag) _jspx_tagPool_html_link_action.get(org.apache.struts.taglib.html.LinkTag.class);
+    _jspx_th_html_link_6.setPageContext(_jspx_page_context);
+    _jspx_th_html_link_6.setParent(null);
+    _jspx_th_html_link_6.setAction("/Action14Empleado");
+    int _jspx_eval_html_link_6 = _jspx_th_html_link_6.doStartTag();
+    if (_jspx_eval_html_link_6 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      if (_jspx_eval_html_link_6 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+        out = _jspx_page_context.pushBody();
+        _jspx_th_html_link_6.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+        _jspx_th_html_link_6.doInitBody();
+      }
+      do {
+        out.write("Empleados");
+        int evalDoAfterBody = _jspx_th_html_link_6.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+      if (_jspx_eval_html_link_6 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+        out = _jspx_page_context.popBody();
+    }
+    if (_jspx_th_html_link_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_html_link_action.reuse(_jspx_th_html_link_6);
+      return true;
+    }
+    _jspx_tagPool_html_link_action.reuse(_jspx_th_html_link_6);
     return false;
   }
 }

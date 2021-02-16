@@ -52,6 +52,8 @@
     </global-exceptions>
 
     <global-forwards>
+        <forward name="web14empleados" path="/web14empleados.jsp"/>
+        <forward name="web14detallesempleado" path="/web14detallesempleado.jsp"/>        
         <forward name="web13eliminardepartamento" path="/web13eliminardepartamento.jsp"/>
         <forward name="web12detallesdepartamento" path="/web12detallesdepartamento.jsp"/>
         <forward name="webmenudepartamentosdinamicos" path="/web12menudepartamentosdinamico.jsp"/>
@@ -65,6 +67,8 @@
     </global-forwards>
 
     <action-mappings>
+        <action path="/Action14DetallesEmpleado" type="controllers.Action14DetallesEmpleado"/>
+        <action path="/Action14Empleado" type="controllers.Action14Empleado"/>              
         <action path="/Action13TablaDepartamentos" type="controllers.Action13TablaDepartamentos"/>
         <action path="/Action13EliminarDepartamento" 
                 type="controllers.Action13EliminarDepartamento"

@@ -19,6 +19,7 @@
             <li class="list-group-item"><html:link action="/Action11MenuOficiosDinamicos">Menú oficios dinámicos</html:link></li>
             <li class="list-group-item"><html:link action="/Action12MenuDepartamentosDinamico">Menú departamentos dinámicos</html:link></li>
             <li class="list-group-item"><html:link action="/Action13TablaDepartamentos">Menú eliminar departamentos</html:link></li>
+            <li class="list-group-item"> <html:link action="/Action14Empleado">Empleados</html:link></li>
         </ul>
     </body>
 </html>
