@@ -1,0 +1,37 @@
+SMAP
+web19seleccionmultipledepartamentos_jsp.java
+JSP
+*S JSP
+*F
++ 0 web19seleccionmultipledepartamentos.jsp
+web19seleccionmultipledepartamentos.jsp
+*L
+1,16:66
+16:83,8
+17,2:91
+18:94,14
+19,2:108
+20:249,13
+21:262
+21:287,6
+21,2:265
+22,2:112
+23:306,6
+23,3:116
+25,4:131
+28,3:145
+30:149,8
+31,11:157
+41:169,14
+42,2:183
+43:325,6
+43,2:187
+44:344,6
+44,2:191
+45:363,6
+45,2:195
+46:382,6
+46,3:199
+48,4:214
+51,4:228
+*E
