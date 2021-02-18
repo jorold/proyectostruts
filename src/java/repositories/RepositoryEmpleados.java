@@ -21,7 +21,7 @@ public class RepositoryEmpleados {
 
     public ArrayList<Empleado> getOficioEmpleado(String oficio) throws SQLException {
         Connection cn = this.getConnection();
-        String sql = "select * from emp where upper(oficio)=upper(?)";
+        String sql = "select * from emp where oficio=?";
         PreparedStatement pst = cn.prepareStatement(sql);
         pst.setString(1, oficio);
         ResultSet rs = pst.executeQuery();
