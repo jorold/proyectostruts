@@ -137,4 +137,29 @@ public class RepositoryEmpleados {
         cn.close();
         return lista;
     }
+
+    public ArrayList<Empleado> getOficiosEmpleados(String[] oficios) throws SQLException {
+        Connection cn = this.getConnection();
+        String oficio = "";
+        for (String of : oficios) {
+            oficio += of + ",";
+        }
+        oficio = oficio.substring(0, oficio.length() - 1);
+        String sql = "select * from emp where oficio in(' + oficio + ')";
+        Statement st = cn.createStatement();
+        ResultSet rs = st.executeQuery(sql);
+        ArrayList<Empleado> lista = new ArrayList<>();
+        while (rs.next()) {
+            int id = rs.getInt("EMP_NO");
+            String ape = rs.getString("APELLIDO");
+            String ofi = rs.getString("OFICIO");
+            int sal = rs.getInt("SALARIO");
+            int deptno = rs.getInt("DEPT_NO");
+            Empleado emp = new Empleado(id, ape, ofi, sal, deptno);
+            lista.add(emp);
+        }
+        rs.close();
+        cn.close();
+        return lista;
+    }
 }
